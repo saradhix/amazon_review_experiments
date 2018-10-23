@@ -72,7 +72,7 @@ def main():
   csvfile.close()
 
   X_all = emb.get_vectors(X_raw_all)
-  y_all = [ 0 if i<0.5 else 1 for i in helpful_all ]
+  y_all = [ 0 if i<0.9 else 1 for i in helpful_all ]
 
   X_all, y_all = shuffle(X_all, y_all)
   X_all = np.array(X_all)
